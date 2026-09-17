@@ -41,6 +41,7 @@ namespace ZombieParty.Controllers
 
             return View(zombieVM);
         }
+
         public IActionResult Edit(int id)
         {
             ZombieVM zombieVM = new ZombieVM();
@@ -53,6 +54,16 @@ namespace ZombieParty.Controllers
 
             return View(zombieVM);
         }
+
+        public IActionResult Delete(int id)
+        {
+            ZombieVM zombieVM = new ZombieVM();
+            zombieVM.Zombie = _baseDonnees.Zombies.Find(id);
+
+            return View(zombieVM);
+        }
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -94,6 +105,22 @@ namespace ZombieParty.Controllers
             }).OrderBy(t => t.Text);
 
             return View(zombieVM);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            Zombie? zombie = _baseDonnees.Zombies.Find(id);
+            if (zombie == null)
+            {
+                return NotFound();
+            }
+
+            _baseDonnees.Zombies.Remove(zombie);
+            _baseDonnees.SaveChanges();
+            TempData["Success"] = $"Zombie {zombie.Name} terminated";
+            return RedirectToAction("Index");
         }
     }
 }
