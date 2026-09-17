@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZombieParty.Models.Data;
 
@@ -11,9 +12,11 @@ using ZombieParty.Models.Data;
 namespace ZombieParty.Migrations
 {
     [DbContext(typeof(ZombiePartyDbContext))]
-    partial class ZombiePartyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260917200648_SeedZombieZombieTypeWeapon")]
+    partial class SeedZombieZombieTypeWeapon
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,18 +126,6 @@ namespace ZombieParty.Migrations
                             Price = 500m,
                             Qty = 30,
                             QtyBought = 1
-                        },
-                        new
-                        {
-                            WeaponId = 3,
-                            CreatedDate = new DateTime(1999, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "The sword used by the Lich king",
-                            Force = 300m,
-                            Image = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c78f1949-5e75-4eab-9541-770f5214a2b7/dhe20pb-202b5835-44a7-4a7e-9a25-f1a06aaf0002.png/v1/fit/w_828,h_1412/frostmourne_by_gortime_dhe20pb-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE2MCIsInBhdGgiOiIvZi9jNzhmMTk0OS01ZTc1LTRlYWItOTU0MS03NzBmNTIxNGEyYjcvZGhlMjBwYi0yMDJiNTgzNS00NGE3LTRhN2UtOWEyNS1mMWEwNmFhZjAwMDIucG5nIiwid2lkdGgiOiI8PTEyNjcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Si10jV5IEsUOJg9AppnfQQlXN2K-1HY8PJ1pPPCbzNU",
-                            Name = "Frostmourne",
-                            Price = 1000m,
-                            Qty = 1,
-                            QtyBought = 0
                         });
                 });
 

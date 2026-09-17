@@ -48,7 +48,8 @@ namespace ZombieParty.Data
             #region Weapon
             builder.Entity<Weapon>().HasData(
                 new Weapon() { WeaponId = 1, Name = "Leopold", Description = "This is to cut your friendly zombies", Force = 200, Image = "https://i.ibb.co/y5nCnXT/dagger-gfce31e967-1920.png", Price = 421, Qty = 21, QtyBought = 3, CreatedDate = new DateTime(1999, 01, 1) },
-                new Weapon() { WeaponId = 2, Name = "Master Shield", Description = "An awesome Stainless Steel Shield", Force = 10, Image = "https://publicdomainvectors.org/photos/Shield-ClassicMedieval1.png", Price = 500, Qty = 30, QtyBought = 1, CreatedDate = new DateTime(1999, 01, 1) }
+                new Weapon() { WeaponId = 2, Name = "Master Shield", Description = "An awesome Stainless Steel Shield", Force = 10, Image = "https://publicdomainvectors.org/photos/Shield-ClassicMedieval1.png", Price = 500, Qty = 30, QtyBought = 1, CreatedDate = new DateTime(1999, 01, 1) },
+                new Weapon() { WeaponId = 3, Name = "Frostmourne", Description = "The sword used by the Lich king", Force = 300, Image = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c78f1949-5e75-4eab-9541-770f5214a2b7/dhe20pb-202b5835-44a7-4a7e-9a25-f1a06aaf0002.png/v1/fit/w_828,h_1412/frostmourne_by_gortime_dhe20pb-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE2MCIsInBhdGgiOiIvZi9jNzhmMTk0OS01ZTc1LTRlYWItOTU0MS03NzBmNTIxNGEyYjcvZGhlMjBwYi0yMDJiNTgzNS00NGE3LTRhN2UtOWEyNS1mMWEwNmFhZjAwMDIucG5nIiwid2lkdGgiOiI8PTEyNjcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Si10jV5IEsUOJg9AppnfQQlXN2K-1HY8PJ1pPPCbzNU", Price = 1000, Qty = 1, QtyBought = 0, CreatedDate = new DateTime(1999, 01, 1) }
             );
             #endregion
         }

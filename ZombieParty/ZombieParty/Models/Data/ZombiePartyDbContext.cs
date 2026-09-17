@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ZombieParty.Data;
 
 namespace ZombieParty.Models.Data
 {
@@ -7,6 +8,11 @@ namespace ZombieParty.Models.Data
         public ZombiePartyDbContext(DbContextOptions<ZombiePartyDbContext> options) : base(options)
         {
 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.GenerateData();
         }
         public DbSet<Zombie> Zombies { get; set; }
         public DbSet<ZombieType> ZombieTypes { get; set; }
